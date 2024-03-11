@@ -1,0 +1,15 @@
+file_format: "1"
+id: kyria_custom_oled
+name: Kyria Rev3 as a new shield to customize OLED displays
+type: shield
+url: https://splitkb.com/products/kyria-pcb-kit
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+  - encoder
+  - underglow
+siblings:
+  - kyria_custom_oled_left
+  - kyria_custom_oled_right
