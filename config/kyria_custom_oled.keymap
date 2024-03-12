@@ -51,17 +51,20 @@
         compatible = "zmk,keymap";
 
         DEFAULT {
-            // ---------------------------------------------------------------------------------------------------------------------------------
-            // |  ESC  |  Q  |  W  |  F   |  P   |  B   |                                        |  J   |  L    |  U    |  Y   |   ;   | BSPC |
-            // |  TAB  |  A  |  R  |  S   |  T   |  G   |                                        |  M   |  N    |  E    |  I   |   O   |   '  |
-            // | SHIFT |  Z  |  X  |  C   |  D   |  V   | L SHIFT | RAISE |    | RAISE | L SHIFT |  K   |  H    |  ,    |  .   |   /   | RET  |
-            //                     |PLAPSE| DEL  | RET  |  SPACE  | LOWER |    | RCTRL |  SPACE  | TAB  | BSPC  | R-ALT |
-
             bindings = <
-&gresc     &kp Q  &kp W  &kp F     &kp P      &kp B                                        &kp J    &kp L     &kp U      &kp Y    &kp SEMI  &kp BSPC
-&kp TAB    &kp A  &kp R  &kp S     &lt 5 T    &kp G                                        &kp M    &kp N     &kp E      &kp I    &kp O     &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp D      &kp V     &kp CAPS  &none  &none  &kp LSHFT  &kp K    &kp H     &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT RET
-                         &kp C_PP  &kp LCTRL  &kp LGUI  &mo 5     &mo 2  &mo 3  &kp SPACE  &kp TAB  &kp BSPC  &kp RALT
+            //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮                                              ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
+            //│  GrEsc   │  Q       │  W       │  F       │  P       │  B       │                                              |  J       |  L       |  U       |  Y       |  ;       |  Bksp    |
+                 &gresc     &kp Q      &kp W      &kp F      &kp P      &kp B                                                     &kp J      &kp L      &kp U      &kp Y      &kp SEMI   &kp BSPC
+            //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                                              ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+            //│  Tab     │  A       │  R       │  S       │  T       │  G       │                                              |  M       |  N       |  E       |  I       |  O       |  '       |
+                 &kp TAB    &kp A      &kp R      &kp S      &lt 5 T    &kp G                                                     &kp M      &kp N      &kp E      &kp I      &kp O      &kp SQT
+            //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┬──────────╮  ╭──────────┬──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+            //│  Shift   │  Z       │  X       │  C       │  D       │  V       │  Caps    |          |  │          │  Shift   │  K       |  H       |  ,       |  .       |  /       |  Enter   |
+                &kp LSHFT   &kp Z      &kp X      &kp C      &kp D      &kp V     &kp CAPS    &none         &none     &kp LSHFT   &kp K      &kp H     &kp COMMA   &kp DOT  &kp FSLH   &mt RSHFT RET
+            //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤  ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
+            //                                 │Play/Pause│  L Ctrl  │  L GUI   │  NavLyr  │   Lower  │  │  Raise   │  Space   │  Tab     │  Bksp    │  R Alt   │
+                                                &kp C_PP    &kp LCTRL   &kp LGUI   &mo 5       &mo 2        &mo 3     &kp SPACE   &kp TAB    &kp BSPC   &kp RALT
+            //                                 ╰──────────┴──────────┴──────────┴──────────┴──────────╯  ╰──────────┴──────────┴──────────┴──────────┴──────────╯
             >;
 
             display-name = "COL";
@@ -69,17 +72,20 @@
         };
 
         QWERTY {
-            // ---------------------------------------------------------------------------------------------------------------------------------
-            // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   | BSPC |
-            // |  TAB  |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
-            // | SHIFT |  Z  |  X  |  C   |  V   |  B   | L SHIFT | RAISE |    |  RAISE  | L SHIFT |  N   |  M    |  ,    |  .   |   /   | RET  |
-            //                     |PLAPSE| DEL  | RET  |  SPACE  | LOWER |    |  RCTRL  |  SPACE  | TAB  | BSPC  | R-ALT |
-
             bindings = <
-&gresc     &kp Q  &kp W  &kp E     &kp R      &kp T                                        &kp Y    &kp U     &kp I      &kp O    &kp P     &kp BSPC
-&kp TAB    &kp A  &kp S  &kp D     &lt 5 F    &kp G                                        &kp H    &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V      &kp B     &kp CAPS  &none  &none  &kp LSHFT  &kp N    &kp M     &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT RET
-                         &kp C_PP  &kp LCTRL  &kp LGUI  &mo 5     &mo 2  &mo 3  &kp SPACE  &kp TAB  &kp BSPC  &kp RALT
+            //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮                                              ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
+            //│  GrEsc   │  Q       │  W       │  E       │  R       │  T       │                                              |  Y       |  U       |  I       |  O       |  P       |  Bksp    |
+                 &gresc     &kp Q      &kp W      &kp E      &kp R      &kp T                                                     &kp Y      &kp U      &kp I      &kp O      &kp P      &kp BSPC
+            //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                                              ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+            //│  Tab     │  A       │  S       │  D       │  F       │  G       │                                              |  H       |  J       |  K       |  L       |  ;       |  '       |
+                 &kp TAB    &kp A      &kp S      &kp D      &lt 5 F    &kp G                                                     &kp H      &kp J      &kp K      &kp L      &kp SEMI   &kp SQT
+            //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┬──────────╮  ╭──────────┬──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+            //│  Shift   │  Z       │  X       │  C       │  V       │  B       │  Caps    |          |  │          │  Shift   │  N       |  M       |  ,       |  .       |  /       |  Enter   |
+               &kp LSHFT    &kp Z      &kp X      &kp C      &kp V      &kp B     &kp CAPS    &none         &none     &kp LSHFT   &kp N      &kp M     &kp COMMA   &kp DOT   &kp FSLH  &mt RSHFT RET
+            //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤  ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
+            //                                 │Play/Pause│  L Ctrl  │  L GUI   │  NavLyr  │  Lower   │  │  Raise   │  Space   │  Tab     │  Bksp    │  R Alt   │
+                                                &kp C_PP    &kp LCTRL   &kp LGUI   &mo 5      &mo 2         &mo 3     &kp SPACE   &kp TAB    &kp BSPC   &kp RALT
+            //                                 ╰──────────┴──────────┴──────────┴──────────┴──────────╯  ╰──────────┴──────────┴──────────┴──────────┴──────────╯
             >;
 
             display-name = "QWE";
@@ -87,17 +93,20 @@
         };
 
         LOWER {
-            // ---------------------------------------------------------------------------------------------------------------------------------
-            // |  ESC  |  1  |  2  |  3   |  4   |  5   |                                          |  6   |  7    |  8    |  9   |   0   | BSPC |
-            // |  TAB  |     |     |      |      |      |                                          |      |  4    |  5    |  6   |       |   '  |
-            // | SHIFT |     |     |      |      |      | L SHIFT | L SHIFT |  | LAYER 1 | L SHIFT |      |  1    |  2    |  3   |       | RET  |
-            //                     |      | DEL  | RET  |  SPACE  |   ESC   |  |         |  SPACE  | TAB  | BSPC  | R-ALT |
-
             bindings = <
-&trans      &kp N1  &kp N2  &kp N3  &kp N4   &kp N5                                         &kp N6     &kp N7    &kp N8    &kp N9  &kp N0     &trans
-&kp DELETE  &none   &none   &none   &none    &none                                          &kp ASTRK  &kp N4    &kp N5    &kp N6  &kp MINUS  &none
-&trans      &none   &none   &none   &none    &none    &kp LSHFT  &trans  &none   &kp LSHFT  &kp FSLH   &kp N1    &kp N2    &kp N3  &kp PLUS   &trans
-                            &trans  &kp DEL  &kp RET  &kp SPACE  &trans  &trans  &kp N0     &kp DOT    &kp BSPC  &kp RALT
+            //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮                                              ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
+            //│          │  1       │  2       │  3       │  4       │  5       │                                              |  6       |  7       |  8       |  9       |  0       |          |
+                 &trans     &kp N1     &kp N2     &kp N3     &kp N4     &kp N5                                                    &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &trans
+            //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                                              ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+            //│  Del     │          │          │          │          │          │                                              |  *       |  4       |  5       |  6       |  -       |          |
+                &kp DEL     &none      &none      &none      &none      &none                                                    &kp ASTRK   &kp N4     &kp N5     &kp N6    &kp MINUS   &none
+            //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┬──────────╮  ╭──────────┬──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+            //│          │          │          │          │          │          │  Shift   |          |  │          │  Shift   │  /       |  1       |  2       |  3       |  +       |          |
+                 &trans     &none      &none      &none      &none      &none     &kp LSHFT   &trans        &none     &kp LSHFT   &kp FSLH   &kp N1     &kp N2     &kp N3     &kp PLUS   &trans
+            //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤  ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
+            //                                 │          │  Del     │  L GUI   │  Space   │  Lower   │  │  Raise   │  0       │  .       │  Bksp    │  R Alt   │
+                                                  &trans     &kp DEL    &kp RET   &kp SPACE   &trans        &trans     &kp N0     &kp DOT    &kp BSPC  &kp RALT
+            //                                 ╰──────────┴──────────┴──────────┴──────────┴──────────╯  ╰──────────┴──────────┴──────────┴──────────┴──────────╯
             >;
 
             display-name = "LWR";
