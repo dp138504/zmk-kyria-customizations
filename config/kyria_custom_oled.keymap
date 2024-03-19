@@ -104,8 +104,8 @@
             //│          │          │          │          │          │          │  Shift   |          |  │          │  Shift   │  /       |  1       |  2       |  3       |  +       |          |
                  &trans     &none      &none      &none      &none      &none     &kp LSHFT   &trans        &none     &kp LSHFT   &kp FSLH   &kp N1     &kp N2     &kp N3     &kp PLUS   &trans
             //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤  ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-            //                                 │          │  Del     │  L GUI   │  Space   │  Lower   │  │  Raise   │  0       │  .       │  Bksp    │  R Alt   │
-                                                  &trans     &kp DEL    &kp RET   &kp SPACE   &trans        &trans     &kp N0     &kp DOT    &kp BSPC  &kp RALT
+            //                                 │          │  Del     │  L GUI   │  Space   │  Lower   │  │  Raise   │  0       │  .       │  Bksp    │          │
+                                                  &trans     &kp DEL    &kp RET   &kp SPACE   &trans        &trans     &kp N0     &kp DOT    &kp BSPC   &trans
             //                                 ╰──────────┴──────────┴──────────┴──────────┴──────────╯  ╰──────────┴──────────┴──────────┴──────────┴──────────╯
             >;
 
@@ -114,17 +114,20 @@
         };
 
         RAISE {
-            // ---------------------------------------------------------------------------------------------------------------------------------
-            // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   | BSPC |
-            // |  TAB  |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
-            // | SHIFT |  Z  |  X  |  C   |  V   |  B   | L SHIFT | L SHIFT |  | LAYER 1 | L SHIFT |  N   |  M    |  ,    |  .   |   /   | RET  |
-            //                     |      | DEL  | RET  |  SPACE  |   ESC   |  |         |  SPACE  | TAB  | BSPC  | R-ALT |
-
             bindings = <
-&trans   &kp EXCLAMATION  &kp AT  &kp HASH  &kp DLLR        &kp PRCNT                                               &kp CARET          &kp AMPS         &kp ASTRK      &kp LPAR   &kp RPAR   &trans
-&kp DEL  &kp TILDE        &none   &kp FSLH  &kp LEFT_BRACE  &kp LEFT_BRACKET                                        &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp BACKSLASH  &kp MINUS  &kp PLUS   &kp PIPE
-&trans   &none            &none   &none     &none           &none             &kp LSHFT  &trans  &none   &kp LSHFT  &none              &none            &none          &kp UNDER  &kp EQUAL  &kp RET
-                                  &trans    &kp DEL         &kp RET           &kp SPACE  &trans  &trans  &kp SPACE  &kp TAB            &kp BSPC         &kp RALT
+            //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮                                              ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
+            //│          │  !       │  @       │  #       │  $       │  %       │                                              |  ^       |  &       |  *       |  (       |  )       |          |
+                 &trans    &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT                                                &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR    &trans
+            //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                                              ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+            //│  Del     │  ~       │          │  /       │  {       │  [       │                                              |  ]       |  }       |  \       |  -       |  +       |  |       |
+                &kp DEL    &kp TILDE   &none     &kp FSLH   &kp LBRC   &kp LBKT                                                  &kp RBKT   &kp RBRC   &kp BSLH   &kp MINUS  &kp PLUS   &kp PIPE
+            //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┬──────────╮  ╭──────────┬──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+            //│          │          │          │          │          │          │  Shift   |          |  │          │  Shift   │          |          |          |  _       |  =       |          |
+                 &trans     &none      &none      &none      &none      &none     &kp LSHFT   &trans        &none     &kp LSHFT   &none      &none      &none     &kp UNDER  &kp EQUAL   &trans
+            //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤  ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
+            //                                 │          │  Del     │  L GUI   │  Space   │  Lower   │  │  Raise   │  Space   │  Tab     │  Bksp    │          │
+                                                  &trans     &kp DEL    &kp RET   &kp SPACE   &trans        &trans    &kp SPACE   &kp TAB    &kp BSPC   &trans
+            //                                 ╰──────────┴──────────┴──────────┴──────────┴──────────╯  ╰──────────┴──────────┴──────────┴──────────┴──────────╯
             >;
 
             display-name = "RSE";
@@ -132,31 +135,41 @@
         };
 
         ADJUST {
-            // ---------------------------------------------------------------------------------------------------------------------------------
-            // |       |QWERTY|BT_CLR|BTSEL0|BTSEL1 |BTSEL2|                                         |      |      |      |      |      |      |
-            // |       |      |      |BTSEL3|BTSEL4 |      |                                         |      |      |      |      |      |      |
-            // |       |      |      |      |       |      |      |      |             |      |      |      |      |      |      |      |      |
-            //                       |      |       |      |      |      |             |      |      |      |      |      |RGBBRI|
-
             bindings = <
-&trans  &to 1   &none   &none   &none   &none                                            &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&trans  &trans  &trans  &none   &none   &trans                                           &trans           &trans           &trans        &trans        &trans        &trans
-&trans  &trans  &trans  &trans  &to 0   &trans  &trans  &trans  &trans  &trans           &trans           &trans           &trans        &trans        &trans        &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans  &rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &kp N3
+            //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮                                                   ╭───────────────┬───────────────┬────────────┬────────────┬────────────┬──────────╮
+            //│          │  QWERTY  │          │          │          │          │                                                   |BT PROFILE 1   |BT PROFILE 2   |BT PROFILE 3|BT PROFILE 4|BT PROFILE 5| BT CLEAR |
+                 &trans     &to 1      &none      &none      &none      &none                                                        &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
+            //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                                                   ├───────────────┼───────────────┼────────────┼────────────┼────────────┼──────────┤
+            //│          │          │          │          │          │          │                                                   |               |               |            |            |            |          |
+                 &trans     &trans     &trans     &none      &none      &trans                                                         &trans          &trans          &trans       &trans       &trans       &trans
+            //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┬──────────╮  ╭──────────┬───────────────┼───────────────┼───────────────┼────────────┼────────────┼────────────┼──────────┤
+            //│          │          │          │          │  COLEMAK │          │          |          |  │          │               │               |               |            |            |            |          |
+                 &trans     &trans     &trans     &trans     &to 0      &trans     &trans     &trans        &trans     &trans          &trans          &trans          &trans       &trans       &trans       &trans
+            //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤  ├──────────┼───────────────┼───────────────┼───────────────┼────────────┼────────────┴────────────┴──────────╯
+            //                                 │          │          │          │          │          │  │          │  RGB Toggle   │  RGB B. Down  │  RGB B. Up    │            │
+                                                  &trans     &trans    &trans      &trans     &trans        &trans  &rgb_ug RGB_TOG &rgb_ug RGB_BRD &rgb_ug RGB_BRI    &trans
+            //                                 ╰──────────┴──────────┴──────────┴──────────┴──────────╯  ╰──────────┴───────────────┴───────────────┴───────────────┴────────────╯
             >;
 
             display-name = "ADJ";
-            sensor-bindings =
-                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&inc_dec_kp N1 NUMBER_2>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         NAVIGATION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                  &trans    &trans    &trans    &trans  &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                  &kp HOME  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp END
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans     &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans
+            //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮                                              ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
+            //│          │          │          │          │          │          │                                              |          |          |          |          |          |          |
+                 &trans    &trans      &trans     &trans     &trans     &trans                                                    &trans     &trans     &trans     &trans     &trans     &trans
+            //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                                              ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+            //│          │          │          │          │          │          │                                              |  Home    |  ←       |  ↓       |  ↑       |  →       |  End     |
+                 &trans     &trans     &trans     &trans     &trans     &trans                                                    &kp HOME   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp END
+            //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┬──────────╮  ╭──────────┬──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+            //│          │          │          │          │          │          │          |          |  │          │          │          |          |          |          |          |          |
+                 &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans        &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+            //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤  ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
+            //                                 │          │          │          │          │          │  │          │          │          │          │          │
+                                                  &trans     &trans     &trans     &trans     &trans        &trans     &trans     &trans     &trans    &trans
+            //                                 ╰──────────┴──────────┴──────────┴──────────┴──────────╯  ╰──────────┴──────────┴──────────┴──────────┴──────────╯
             >;
 
             display-name = "NAV";
