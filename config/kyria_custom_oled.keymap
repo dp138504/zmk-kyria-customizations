@@ -84,7 +84,7 @@
                &kp LSHFT    &kp Z      &kp X      &kp C      &kp V      &kp B     &kp CAPS    &none         &none     &kp LSHFT   &kp N      &kp M     &kp COMMA   &kp DOT   &kp FSLH  &mt RSHFT RET
             //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤  ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
             //                                 │Play/Pause│  L Ctrl  │  L GUI   │  NavLyr  │  Lower   │  │  Raise   │  Space   │  Tab     │  Bksp    │  R Alt   │
-                                                &kp C_PP    &kp LCTRL   &kp LGUI   &mo 5      &mo 2         &mo 3     &kp SPACE   &kp TAB    &kp BSPC   &kp RALT
+                                                &kp C_PP    &kp LCTRL   &kp LGUI  &kp SPACE   &mo 2         &mo 3     &kp SPACE   &kp TAB    &kp BSPC   &kp RALT
             //                                 ╰──────────┴──────────┴──────────┴──────────┴──────────╯  ╰──────────┴──────────┴──────────┴──────────┴──────────╯
             >;
 
