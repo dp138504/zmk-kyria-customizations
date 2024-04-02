@@ -22,3 +22,5 @@ include:
     shield: kyria_custom_oled_left
   - board: nice_nano_v2
     shield: kyria_custom_oled_right
+  - board: nice_nano_v2
+    shield: settings_reset
