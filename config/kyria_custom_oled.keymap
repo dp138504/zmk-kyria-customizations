@@ -59,8 +59,8 @@
             //│  Tab     │  A       │  R       │  S       │  T       │  G       │                                              |  M       |  N       |  E       |  I       |  O       |  '       |
                  &kp TAB    &kp A      &kp R      &kp S      &lt 5 T    &kp G                                                     &kp M      &kp N      &kp E      &kp I      &kp O      &kp SQT
             //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┬──────────╮  ╭──────────┬──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-            //│  Shift   │  Z       │  X       │  C       │  D       │  V       │  Caps    |          |  │          │  Shift   │  K       |  H       |  ,       |  .       |  /       |  Enter   |
-                &kp LSHFT   &kp Z      &kp X      &kp C      &kp D      &kp V     &kp CAPS    &none         &none     &kp LSHFT   &kp K      &kp H     &kp COMMA   &kp DOT  &kp FSLH   &mt RSHFT RET
+            //│  Shift   │  Z       │  X       │  C       │  D       │  V       │  Caps    |  L Alt   |  │          │  Shift   │  K       |  H       |  ,       |  .       |  /       |  Enter   |
+                &kp LSHFT   &kp Z      &kp X      &kp C      &kp D      &kp V     &kp CAPS    &kp LALT      &none     &kp LSHFT   &kp K      &kp H     &kp COMMA   &kp DOT  &kp FSLH   &mt RSHFT RET
             //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤  ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
             //                                 │Play/Pause│  L Ctrl  │  L GUI   │  NavLyr  │   Lower  │  │  Raise   │  Space   │  Tab     │  Bksp    │  R Alt   │
                                                 &kp C_PP    &kp LCTRL   &kp LGUI   &mo 5       &mo 2        &mo 3     &kp SPACE   &kp TAB    &kp BSPC   &kp RALT
@@ -68,7 +68,7 @@
             >;
 
             display-name = "COL";
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_DN PG_UP>;
         };
 
         QWERTY {
@@ -80,8 +80,8 @@
             //│  Tab     │  A       │  S       │  D       │  F       │  G       │                                              |  H       |  J       |  K       |  L       |  ;       |  '       |
                  &kp TAB    &kp A      &kp S      &kp D      &lt 5 F    &kp G                                                     &kp H      &kp J      &kp K      &kp L      &kp SEMI   &kp SQT
             //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┬──────────╮  ╭──────────┬──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-            //│  Shift   │  Z       │  X       │  C       │  V       │  B       │  Caps    |          |  │          │  Shift   │  N       |  M       |  ,       |  .       |  /       |  Enter   |
-               &kp LSHFT    &kp Z      &kp X      &kp C      &kp V      &kp B     &kp CAPS    &none         &none     &kp LSHFT   &kp N      &kp M     &kp COMMA   &kp DOT   &kp FSLH  &mt RSHFT RET
+            //│  Shift   │  Z       │  X       │  C       │  V       │  B       │  Caps    |  L Alt   |  │          │  Shift   │  N       |  M       |  ,       |  .       |  /       |  Enter   |
+               &kp LSHFT    &kp Z      &kp X      &kp C      &kp V      &kp B     &kp CAPS    &kp LALT      &none     &kp LSHFT   &kp N      &kp M     &kp COMMA   &kp DOT   &kp FSLH  &mt RSHFT RET
             //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤  ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
             //                                 │Play/Pause│  L Ctrl  │  L GUI   │  NavLyr  │  Lower   │  │  Raise   │  Space   │  Tab     │  Bksp    │  R Alt   │
                                                 &kp C_PP    &kp LCTRL   &kp LGUI  &kp SPACE   &mo 2         &mo 3     &kp SPACE   &kp TAB    &kp BSPC   &kp RALT
@@ -89,7 +89,7 @@
             >;
 
             display-name = "QWE";
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_DN PG_UP>;
         };
 
         LOWER {
@@ -104,13 +104,13 @@
             //│          │          │          │          │          │          │  Shift   |          |  │          │  Shift   │  /       |  1       |  2       |  3       |  +       |          |
                  &trans     &none      &none      &none      &none      &none     &kp LSHFT   &trans        &none     &kp LSHFT   &kp FSLH   &kp N1     &kp N2     &kp N3     &kp PLUS   &trans
             //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤  ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-            //                                 │          │  Del     │  L GUI   │  Space   │  Lower   │  │  Raise   │  0       │  .       │  Bksp    │          │
-                                                  &trans     &kp DEL    &kp RET   &kp SPACE   &trans        &trans     &kp N0     &kp DOT    &kp BSPC   &trans
+            //                                 │          │  Del     │  L GUI   │  Space   │  Lower   │  │  Raise   │  .       │  0       │  Bksp    │          │
+                                                  &trans     &kp DEL    &kp RET   &kp SPACE   &trans        &trans     &kp DOT    &kp N0    &kp BSPC   &trans
             //                                 ╰──────────┴──────────┴──────────┴──────────┴──────────╯  ╰──────────┴──────────┴──────────┴──────────┴──────────╯
             >;
 
             display-name = "LWR";
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_DN PG_UP>;
         };
 
         RAISE {
@@ -131,7 +131,7 @@
             >;
 
             display-name = "RSE";
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_DN PG_UP>;
         };
 
         ADJUST {
@@ -152,7 +152,7 @@
             >;
 
             display-name = "ADJ";
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_DN PG_UP>;
         };
 
         NAVIGATION {
