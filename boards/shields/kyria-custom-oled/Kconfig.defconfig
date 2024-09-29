@@ -20,6 +20,10 @@ if SHIELD_KYRIA_CUSTOM_OLED_LEFT || SHIELD_KYRIA_CUSTOM_OLED_RIGHT
 
   if ZMK_DISPLAY
 
+  config ZMK_DONGLE_DISPLAY_DONGLE_BATTERY
+    bool "Show also the battery level of the dongle"
+    depends on BT && (!ZMK_SPLIT_BLE || ZMK_SPLIT_ROLE_CENTRAL)
+
   config ZMK_DISPLAY_STATUS_SCREEN_CUSTOM
     select LV_USE_LABEL
     select LV_USE_IMG
