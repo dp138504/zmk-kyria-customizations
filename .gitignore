@@ -1,0 +1,4 @@
+build/trackpoint/left/*
+build/trackpoint/right/*
+build/custom_status_screen/left/*
+build/custom_status_screen/right/*
