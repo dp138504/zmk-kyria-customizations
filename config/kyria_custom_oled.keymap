@@ -59,11 +59,11 @@
             //│  Tab     │  A       │  R       │  S       │  T       │  G       │                                              |  M       |  N       |  E       |  I       |  O       |  '       |
                  &kp TAB    &kp A      &kp R      &kp S      &lt 5 T    &kp G                                                     &kp M      &kp N      &kp E      &kp I      &kp O      &kp SQT
             //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┬──────────╮  ╭──────────┬──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-            //│  Shift   │  Z       │  X       │  C       │  D       │  V       │  Caps    |  L Alt   |  │          │  Shift   │  K       |  H       |  ,       |  .       |  /       |  Enter   |
-                &kp LSHFT   &kp Z      &kp X      &kp C      &kp D      &kp V     &kp CAPS    &kp LALT      &none     &kp LSHFT   &kp K      &kp H     &kp COMMA   &kp DOT  &kp FSLH   &mt RSHFT RET
+            //│  Shift   │  Z       │  X       │  C       │  D       │  V       │  Caps    |  R Alt   |  │          │  Shift   │  K       |  H       |  ,       |  .       |  /       |  Enter   |
+                &kp LSHFT   &kp Z      &kp X      &kp C      &kp D      &kp V     &kp CAPS    &kp RALT      &none     &kp LSHFT   &kp K      &kp H     &kp COMMA   &kp DOT  &kp FSLH   &mt RSHFT RET
             //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤  ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-            //                                 │Play/Pause│  L Ctrl  │  L GUI   │  NavLyr  │   Lower  │  │  Raise   │  Space   │  Tab     │  Bksp    │  R Alt   │
-                                                &kp C_PP    &kp LCTRL   &kp LGUI   &mo 5       &mo 2        &mo 3     &kp SPACE   &kp TAB    &kp BSPC   &kp RALT
+            //                                 │Play/Pause│  L Ctrl  │  L GUI   │  NavLyr  │   Lower  │  │  Raise   │  Space   │  Tab     │  Bksp    │  L Alt   │
+                                                &kp C_PP    &kp LCTRL   &kp LGUI   &mo 5       &mo 2        &mo 3     &kp SPACE   &kp TAB    &kp BSPC   &kp LALT
             //                                 ╰──────────┴──────────┴──────────┴──────────┴──────────╯  ╰──────────┴──────────┴──────────┴──────────┴──────────╯
             >;
 
@@ -80,11 +80,11 @@
             //│  Tab     │  A       │  S       │  D       │  F       │  G       │                                              |  H       |  J       |  K       |  L       |  ;       |  '       |
                  &kp TAB    &kp A      &kp S      &kp D      &lt 5 F    &kp G                                                     &kp H      &kp J      &kp K      &kp L      &kp SEMI   &kp SQT
             //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┬──────────╮  ╭──────────┬──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-            //│  Shift   │  Z       │  X       │  C       │  V       │  B       │  Caps    |  L Alt   |  │          │  Shift   │  N       |  M       |  ,       |  .       |  /       |  Enter   |
-               &kp LSHFT    &kp Z      &kp X      &kp C      &kp V      &kp B     &kp CAPS    &kp LALT      &none     &kp LSHFT   &kp N      &kp M     &kp COMMA   &kp DOT   &kp FSLH  &mt RSHFT RET
+            //│  Shift   │  Z       │  X       │  C       │  V       │  B       │  Caps    |  R Alt   |  │          │  Shift   │  N       |  M       |  ,       |  .       |  /       |  Enter   |
+               &kp LSHFT    &kp Z      &kp X      &kp C      &kp V      &kp B     &kp CAPS    &kp RALT      &none     &kp LSHFT   &kp N      &kp M     &kp COMMA   &kp DOT   &kp FSLH  &mt RSHFT RET
             //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤  ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-            //                                 │Play/Pause│  L Ctrl  │  L GUI   │  NavLyr  │  Lower   │  │  Raise   │  Space   │  Tab     │  Bksp    │  R Alt   │
-                                                &kp C_PP    &kp LCTRL   &kp LGUI  &kp SPACE   &mo 2         &mo 3     &kp SPACE   &kp TAB    &kp BSPC   &kp RALT
+            //                                 │Play/Pause│  L Ctrl  │  L GUI   │  NavLyr  │  Lower   │  │  Raise   │  Space   │  Tab     │  Bksp    │  L Alt   │
+                                                &kp C_PP    &kp LCTRL   &kp LGUI  &kp SPACE   &mo 2         &mo 3     &kp SPACE   &kp TAB    &kp BSPC   &kp LALT
             //                                 ╰──────────┴──────────┴──────────┴──────────┴──────────╯  ╰──────────┴──────────┴──────────┴──────────┴──────────╯
             >;
 
