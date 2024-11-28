@@ -49,6 +49,38 @@
         };
     };
 
+    macros {
+      layout_1: layout_1 {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&macro_tap &kp LCTRL &kp LCTRL &kp N1>;
+      };
+
+      layout_2: layout_2 {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&macro_tap &kp LCTRL &kp LCTRL &kp N2>;
+      };
+
+      cycle_left: cycle_left {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&macro_tap &kp LCTRL &kp LCTRL &kp LEFT>;
+      };
+
+      cycle_right: cycle_right {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&macro_tap &kp LCTRL &kp LCTRL &kp RIGHT>;
+      };
+
+      cycle_input: cycle_input {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&macro_tap &kp RALT &kp RALT>;
+      };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -61,11 +93,11 @@
             //│  Tab     │  A       │  R       │  S       │  T       │  G       │                                              |  M       |  N       |  E       |  I       |  O       |  '       |
                  &kp TAB    &kp A      &kp R      &kp S      &lt 5 T    &kp G                                                     &kp M      &kp N      &kp E      &kp I      &kp O      &kp SQT
             //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┬──────────╮  ╭──────────┬──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-            //│  Shift   │  Z       │  X       │  C       │  D       │  V       │  Caps    |  R Alt   |  │          │  Shift   │  K       |  H       |  ,       |  .       |  /       |  Enter   |
-                &kp LSHFT   &kp Z      &kp X      &kp C      &kp D      &kp V     &kp CAPS    &kp RALT      &none     &kp LSHFT   &kp K      &kp H     &kp COMMA   &kp DOT  &kp FSLH   &mt RSHFT RET
+            //│  Shift   │  Z       │  X       │  C       │  D       │  V       │  Caps    |  L Alt   |  │          │  Shift   │  K       |  H       |  ,       |  .       |  /       |  Enter   |
+                &kp LSHFT   &kp Z      &kp X      &kp C      &kp D      &kp V     &kp CAPS    &kp LALT      &none     &kp LSHFT   &kp K      &kp H     &kp COMMA   &kp DOT  &kp FSLH   &mt RSHFT RET
             //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤  ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-            //                                 │Play/Pause│  L Ctrl  │  L GUI   │  NavLyr  │   Lower  │  │  Raise   │  Space   │  Tab     │  Bksp    │  L Alt   │
-                                                &kp C_PP    &kp LCTRL   &kp LGUI   &mo 5       &mo 2        &mo 3     &kp SPACE   &kp TAB    &kp BSPC   &kp LALT
+            //                                 │Play/Pause│  L Ctrl  │  L GUI   │  NavLyr  │   Lower  │  │  Raise   │  Space   │  Tab     │  Bksp    │  R Alt   │
+                                                &kp C_PP    &kp LCTRL   &kp LGUI   &mo 5       &mo 2        &mo 3     &kp SPACE   &kp TAB    &kp BSPC   &kp RALT
             //                                 ╰──────────┴──────────┴──────────┴──────────┴──────────╯  ╰──────────┴──────────┴──────────┴──────────┴──────────╯
             >;
 
@@ -82,11 +114,11 @@
             //│  Tab     │  A       │  S       │  D       │  F       │  G       │                                              |  H       |  J       |  K       |  L       |  ;       |  '       |
                  &kp TAB    &kp A      &kp S      &kp D      &lt 5 F    &kp G                                                     &kp H      &kp J      &kp K      &kp L      &kp SEMI   &kp SQT
             //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┬──────────╮  ╭──────────┬──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-            //│  Shift   │  Z       │  X       │  C       │  V       │  B       │  Caps    |  R Alt   |  │          │  Shift   │  N       |  M       |  ,       |  .       |  /       |  Enter   |
-               &kp LSHFT    &kp Z      &kp X      &kp C      &kp V      &kp B     &kp CAPS    &kp RALT      &none     &kp LSHFT   &kp N      &kp M     &kp COMMA   &kp DOT   &kp FSLH  &mt RSHFT RET
+            //│  Shift   │  Z       │  X       │  C       │  V       │  B       │  Caps    |  L Alt   |  │          │  Shift   │  N       |  M       |  ,       |  .       |  /       |  Enter   |
+               &kp LSHFT    &kp Z      &kp X      &kp C      &kp V      &kp B     &kp CAPS    &kp LALT      &none     &kp LSHFT   &kp N      &kp M     &kp COMMA   &kp DOT   &kp FSLH  &mt RSHFT RET
             //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤  ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-            //                                 │Play/Pause│  L Ctrl  │  L GUI   │  NavLyr  │  Lower   │  │  Raise   │  Space   │  Tab     │  Bksp    │  L Alt   │
-                                                &kp C_PP    &kp LCTRL   &kp LGUI  &kp SPACE   &mo 2         &mo 3     &kp SPACE   &kp TAB    &kp BSPC   &kp LALT
+            //                                 │Play/Pause│  L Ctrl  │  L GUI   │  NavLyr  │  Lower   │  │  Raise   │  Space   │  Tab     │  Bksp    │  R Alt   │
+                                                &kp C_PP    &kp LCTRL   &kp LGUI  &kp SPACE   &mo 2         &mo 3     &kp SPACE   &kp TAB    &kp BSPC   &kp RALT
             //                                 ╰──────────┴──────────┴──────────┴──────────┴──────────╯  ╰──────────┴──────────┴──────────┴──────────┴──────────╯
             >;
 
@@ -143,10 +175,10 @@
                  &trans     &to 1      &none      &none      &none      &none                                                        &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
             //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                                                   ├───────────────┼───────────────┼────────────┼────────────┼────────────┼──────────┤
             //│          │          │          │          │          │          │                                                   |               |               |            |            |            |          |
-                 &trans     &trans     &trans     &none      &none      &trans                                                         &trans          &trans          &trans       &trans       &trans       &trans
+                 &trans     &trans     &trans     &none      &none      &trans                                                         &cycle_left     &layout_1      &layout_2    &cycle_right  &trans       &trans
             //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┬──────────╮  ╭──────────┬───────────────┼───────────────┼───────────────┼────────────┼────────────┼────────────┼──────────┤
             //│          │          │          │          │  COLEMAK │          │          |          |  │          │               │               |               |            |            |            |          |
-                 &trans     &trans     &trans     &trans     &to 0      &trans     &trans     &trans        &trans     &trans          &trans          &trans          &trans       &trans       &trans       &trans
+                 &trans     &trans     &trans     &trans     &to 0      &trans     &trans     &trans        &trans     &trans          &trans          &cycle_input   &trans       &trans       &trans       &trans
             //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤  ├──────────┼───────────────┼───────────────┼───────────────┼────────────┼────────────┴────────────┴──────────╯
             //                                 │          │          │          │          │          │  │          │  RGB Toggle   │  RGB B. Down  │  RGB B. Up    │            │
                                                   &trans     &trans    &trans      &trans     &trans        &trans  &rgb_ug RGB_TOG &rgb_ug RGB_BRD &rgb_ug RGB_BRI    &trans
