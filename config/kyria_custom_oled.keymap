@@ -29,7 +29,9 @@
 
 &right_encoder { steps = <72>; };
 
-&mt { retro-tap; };
+&mt { flavor = "tap-preferred"; };
+
+&lt { flavor = "tap-preferred"; };
 
 / {
     behaviors {
