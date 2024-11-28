@@ -29,6 +29,8 @@
 
 &right_encoder { steps = <72>; };
 
+&mt { tapping-term-ms = <125>; };
+
 / {
     behaviors {
         rgb_knob: rgb_knob {
