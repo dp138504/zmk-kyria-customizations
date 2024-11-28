@@ -20,7 +20,9 @@
 include:
   - board: nice_nano_v2
     shield: kyria_custom_oled_left
+    snippet: zmk-usb-logging
   - board: nice_nano_v2
     shield: kyria_custom_oled_right
+    snippet: zmk-usb-logging
   - board: nice_nano_v2
     shield: settings_reset
