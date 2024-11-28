@@ -29,7 +29,7 @@
 
 &right_encoder { steps = <72>; };
 
-&mt { tapping-term-ms = <125>; };
+&mt { retro-tap; };
 
 / {
     behaviors {
