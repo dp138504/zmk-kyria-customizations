@@ -53,31 +53,45 @@
       layout_1: layout_1 {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <&macro_tap &kp LCTRL &kp LCTRL &kp N1>;
+        bindings = <&macro_wait_time 100>,
+                   <&kp LCTRL>,
+                   <&kp LCTRL>, 
+                   <&kp N1>;
       };
 
       layout_2: layout_2 {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <&macro_tap &kp LCTRL &kp LCTRL &kp N2>;
+        bindings = <&macro_wait_time 100>,
+                   <&kp LCTRL>,
+                   <&kp LCTRL>,
+                   <&kp N2>;
       };
 
       cycle_left: cycle_left {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <&macro_tap &kp LCTRL &kp LCTRL &kp LEFT>;
+        bindings = <&macro_wait_time 100>,
+                   <&kp LCTRL>,
+                   <&kp LCTRL>,
+                   <&kp LEFT>;
       };
 
       cycle_right: cycle_right {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <&macro_tap &kp LCTRL &kp LCTRL &kp RIGHT>;
+        bindings = <&macro_wait_time 100>,
+                   <&kp LCTRL>,
+                   <&kp LCTRL>,
+                   <&kp RIGHT>;
       };
 
       cycle_input: cycle_input {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <&macro_tap &kp RALT &kp RALT>;
+        bindings = <&macro_wait_time 100>,
+                   <&kp RALT>,
+                   <&kp RALT>;
       };
     };
 
